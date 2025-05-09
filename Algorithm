@@ -1,0 +1,31 @@
+ALGORITHM Read_sentence 
+VAR  
+  len : INTEGER := 0;  
+  wordCount : INTEGER := 1;  
+  vowelCount : INTEGER := 0;  
+  i : INTEGER := 1;  
+  sentence : STRING;  
+  charc : CHAR;  
+  
+BEGIN  
+  Read(sentence); /* the sentence must end with a period '.'  */
+
+  WHILE i <= LENGTH(sentence) DO  
+    charc := sentence[i];  
+    len := len + 1;  
+
+    IF char = ' ' THEN  
+      wordCount := wordCount + 1;  
+    END_IF  
+
+    IF charc = 'a' OR charc = 'e' OR charc = 'i' OR charc = 'o' OR charc = 'u' OR charc = 'A' OR charc = 'E' OR charc = 'I' OR charc = 'O' OR charc = 'U' THEN  
+      vowelCount := vowelCount + 1;  
+    END_IF  
+
+    i := i + 1;  
+  END_WHILE  
+
+  Write("The length of the sentence is : ", len);  
+  Write("The number of words in the sentence is : ", wordCount);  
+  Write("The number of vowels in the sentence is : ", vowelCount);  
+END  
